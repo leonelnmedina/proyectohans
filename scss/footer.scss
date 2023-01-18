@@ -1,0 +1,20 @@
+footer {
+    height: 10vh;
+    grid-area: footer;
+    background-color: $negro;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    div {
+        h3 {
+            color: $beige;
+            font-weight: lighter;
+            font-size: 1.7rem;
+        }
+    }
+    .botoneraFoot {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}

@@ -1,16 +1,7 @@
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-@font-face {
-  font-family: bebasneue;
-  src: url('../asset/font/BebasNeue-Regular.ttf') format('truetype');
-}
-@font-face {
-  font-family: poppins;
-  src: url('../asset/font/Poppins-Medium.ttf') format('truetype');
-}
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
 body {
   width: 100vw;
@@ -19,229 +10,104 @@ body {
   font-size: 1.1rem;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr;
-  grid-template-areas: 
-  "header"
-  "main"
-  "footer";
-}
+  grid-template-areas: "header"
+ "main"
+ "footer"; }
+
+@font-face {
+  font-family: bebasneue;
+  src: url("../asset/font/BebasNeue-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: poppins;
+  src: url("../asset/font/Poppins-Medium.ttf") format("truetype"); }
 
 header {
   background-color: #252422;
-  height: 10vh; 
-  grid-area: header;
-}
-
-header nav {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.estiloLogo {
-  width: 210px;
-}
-
-.botonera a:link, a:visited, a:active {
-  text-decoration: none;
- color: #FFFCF2;
- font-size: 1.2rem;
-}
-
-.botonera li {
-  list-style: none;
-  background-color: #EB5E28;
-  display: inline-flex;
-  padding: 10px;
-  border: 2px solid #CCC5B9;
-  margin: 4px;
-}
-
-#boton1:hover {
-  transform: scale(1.1);
-}
-.boton2:hover {
-  transform: scale(1.1);
-}
-.boton3:hover {
-  transform: scale(1.1);
-}
-.boton4:hover {
-  transform: scale(1.1);
-}
-.boton5:hover {
-  transform: scale(1.1);
-}
+  height: 10vh;
+  grid-area: header; }
+  header nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    header nav div .estiloLogo {
+      width: 210px; }
+    header nav .botonera ul li {
+      list-style: none;
+      background-color: #EB5E28;
+      display: inline-flex;
+      padding: 10px;
+      border: 2px solid #CCC5B9;
+      margin: 4px; }
+    header nav .botonera a:link, header nav a:visited, header nav a:active {
+      text-decoration: none;
+      color: #FFFCF2;
+      font-size: 1.2rem; }
+    header nav .boton1:hover {
+      transform: scale(1.1); }
+    header nav .boton2:hover {
+      transform: scale(1.1); }
+    header nav .boton3:hover {
+      transform: scale(1.1); }
+    header nav .boton4:hover {
+      transform: scale(1.1); }
+    header nav .boton5:hover {
+      transform: scale(1.1); }
 
 main {
-height: 80vh;
-background-color: #403D39;
-grid-area: main;
-display: grid;
-grid-template-rows: 2fr 1.5fr;
-grid-template-columns: 1fr;
-grid-template-areas: "sectUno";
-justify-items: center;
-}
-
-#sectionUno {
-text-align: center;
-  grid-area: sectUno;
-font-size: 2rem;
-}
-
-#sectionDos {
-  text-align: center;
-  font-size: 2rem;
-  width: 800px;
-  color: #EB5E28; 
-  font-weight: lighter;
-}
-
-.textOne {
-  font-family: poppyns;
-  font-size: 1.6rem;
-  color: #FFFCF2;
- 
-}
-
-.imagen1 {
-  width: 960px;
-  align-self: center;
-}
-
-#sectEsp {
-grid-area: sectUno;
-text-align: center;
-}
-
-h1 {
-  background-color: #252422;
-  padding: 5px;
-  border: 1px solid #EB5E28;
-  margin: 2px;
-}
-
-.tituloEspecial {
-  color: #EB5E28;
-  font-size: 2.2rem;
-  font-weight: bolder;
-  padding: 10px;
-}
-
-.textEsp {
-  width: 500px;
-  font-family: poppyns;
-  font-size: 1.5rem;
-  color: #FFFCF2;
-  padding: 10px;
-}
-
-video {
-  width: 520px;
-  padding-top: 15px;
-}
+  height: 80vh;
+  background-color: #403D39;
+  grid-area: main;
+  display: grid;
+  grid-template-rows: 2fr 1.5fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: "sectUno";
+  justify-items: center; }
+  main #sectionUno {
+    text-align: center;
+    grid-area: sectUno;
+    font-size: 2rem; }
+    main #sectionUno div .imagen1 {
+      width: 960px;
+      align-self: center; }
+  main #sectionDos {
+    text-align: center;
+    font-size: 2rem;
+    width: 800px;
+    color: #EB5E28;
+    font-weight: lighter; }
+    main #sectionDos article div h1 {
+      background-color: #252422;
+      padding: 15px;
+      border: 1px solid #EB5E28;
+      margin: 2px; }
+    main #sectionDos article .textOne {
+      font-family: poppyns;
+      font-size: 1.6rem;
+      color: #FFFCF2;
+      padding: 5px; }
+    main #sectionDos article .textDos {
+      font-family: poppyns;
+      font-size: 1rem;
+      color: #FFFCF2; }
+    main #sectionDos article video {
+      width: 700px;
+      align-self: center; }
 
 footer {
-height: 10vh;
-grid-area: footer;
-background-color: #252422;
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-
-h3{
-  color: #FFFCF2;
-  font-weight: lighter;
-  font-size: 1.7rem;
-}
-
-.botoneraFoot {
-display: flex;
-flex-direction: row;
-justify-content: center;
-}
-
-
-
-@media (max-width: 1400px) {
-
-}
-@media (max-width: 1200px) {
-
-}
-@media (max-width: 1024px) {
-
-}
-@media (max-width: 768px) {
-
-}
-@media (max-width: 600px) {
-
-}
-@media (max-width: 425px) {
-  .estiloLogo {
-    width: 120px;
-  }
-  main {
-    height: 80vh;
-    background-color: #403D39;
-    grid-area: main;
-    display: grid;
-    grid-template-rows: 1fr 1.2fr;
-    grid-template-columns: 1fr;
-    grid-template-areas: "sectUno";
-    justify-items: center;
-    }
-  #sectionDos {
-    text-align: center;
-    font-size: 1.7rem;
-    width: 420px;
-    color: #EB5E28; 
-    font-weight: lighter;
-  }
-
-  .imagen1 {
-    width: 423px;
-    align-self: center;
-  
-  }
-  .botonera a:link, a:visited, a:active {
-    text-decoration: none;
-   color: #FFFCF2;
-   font-size: 1.1rem;
-  }
-  
-  .botonera li {
-    list-style: none;
-    background-color: #EB5E28;
-    display: inline-flex;
-    padding: 3px;
-    border: 2px solid #CCC5B9;
-    margin: 4px;
-  }
-  .tituloEspecial {
-    color: #EB5E28;
-    font-size: 1.7rem;
-    font-weight: bolder;
-    padding: 10px;
-  }
-  
-  .textEsp {
-    width: 420px;
-    font-family: poppyns;
-    font-size: 1.5rem;
+  height: 10vh;
+  grid-area: footer;
+  background-color: #252422;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  footer div h3 {
     color: #FFFCF2;
-    padding: 10px;
-  }
-  
-  video {
-    width: 423px;
-    padding-top: 15px;
-  }
-}
-@media (max-width: 320px) {
-
-}
+    font-weight: lighter;
+    font-size: 1.7rem; }
+  footer .botoneraFoot {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }

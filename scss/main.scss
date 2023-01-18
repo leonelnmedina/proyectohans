@@ -1,0 +1,52 @@
+main {
+      height: 80vh;
+      background-color: #403D39;
+      grid-area: main;
+      display: grid;
+      grid-template-rows: 2fr 1.5fr;
+      grid-template-columns: 1fr;
+      grid-template-areas: "sectUno";
+      justify-items: center;
+    #sectionUno {
+        text-align: center;
+        grid-area: sectUno;
+        font-size: 2rem;
+        div {
+            .imagen1 {
+                @include sizes (960px, center)
+            }
+        }
+    }
+    #sectionDos {
+        text-align: center;
+        font-size: 2rem;
+        width: 800px;
+        color: $naranja; 
+        font-weight: lighter;
+        article {
+            div {
+                h1 {
+                    background-color: $negro;
+                    padding: 15px;
+                    border: 1px solid $naranja;
+                    margin: 2px;
+                }
+            }
+            .textOne {
+                font-family: poppyns;
+                font-size: 1.6rem;
+                color: $beige;
+                padding: 5px;
+            }
+            .textDos {
+                font-family: poppyns;
+                font-size: 1rem;
+                color: $beige;
+                
+            }
+            video {
+                @include sizes (700px, center)
+            }
+        }
+    }
+}

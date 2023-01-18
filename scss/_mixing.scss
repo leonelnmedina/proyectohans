@@ -1,0 +1,4 @@
+@mixin sizes($width, $aling-self) {
+    width: $width;
+    align-self: $aling-self;
+}
