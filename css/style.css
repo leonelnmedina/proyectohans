@@ -10,9 +10,7 @@ body {
   font-size: 1.1rem;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr;
-  grid-template-areas: "header"
- "main"
- "footer"; }
+  grid-template-areas: "header" "main" "footer"; }
 
 @font-face {
   font-family: bebasneue;
@@ -34,6 +32,9 @@ header {
     flex-wrap: wrap; }
     header nav div .estiloLogo {
       width: 210px; }
+      @media screen and (max-width: 425px) {
+        header nav div .estiloLogo {
+          width: 120px; } }
     header nav .botonera ul li {
       list-style: none;
       background-color: #EB5E28;
@@ -41,10 +42,17 @@ header {
       padding: 10px;
       border: 2px solid #CCC5B9;
       margin: 4px; }
+      @media screen and (max-width: 425px) {
+        header nav .botonera ul li {
+          padding: 3px;
+          border: 2px solid #CCC5B9; } }
     header nav .botonera a:link, header nav a:visited, header nav a:active {
       text-decoration: none;
       color: #FFFCF2;
       font-size: 1.2rem; }
+      @media screen and (max-width: 425px) {
+        header nav .botonera a:link, header nav a:visited, header nav a:active {
+          font-size: 1.1rem; } }
     header nav .boton1:hover {
       transform: scale(1.1); }
     header nav .boton2:hover {
@@ -65,6 +73,9 @@ main {
   grid-template-columns: 1fr;
   grid-template-areas: "sectUno";
   justify-items: center; }
+  @media screen and (max-width: 425px) {
+    main {
+      grid-template-rows: 1fr 1.2fr; } }
   main #sectionUno {
     text-align: center;
     grid-area: sectUno;
@@ -72,17 +83,34 @@ main {
     main #sectionUno div .imagen1 {
       width: 960px;
       align-self: center; }
+      @media screen and (max-width: 425px) {
+        main #sectionUno div .imagen1 {
+          width: 423px; } }
+      @media screen and (max-width: 768px) {
+        main #sectionUno div .imagen1 {
+          max-width: 760px; } }
   main #sectionDos {
     text-align: center;
     font-size: 2rem;
     width: 800px;
     color: #EB5E28;
     font-weight: lighter; }
+    @media screen and (max-width: 425px) {
+      main #sectionDos {
+        font-size: 1.7rem;
+        width: 420px; } }
+    @media screen and (max-width: 768px) {
+      main #sectionDos {
+        font-size: 1.6rem;
+        width: 100%; } }
     main #sectionDos article div h1 {
       background-color: #252422;
       padding: 15px;
       border: 1px solid #EB5E28;
       margin: 2px; }
+      @media screen and (max-width: 768px) {
+        main #sectionDos article div h1 {
+          text-align: center; } }
     main #sectionDos article .textOne {
       font-family: poppyns;
       font-size: 1.6rem;
@@ -95,6 +123,10 @@ main {
     main #sectionDos article video {
       width: 700px;
       align-self: center; }
+      @media screen and (max-width: 425px) {
+        main #sectionDos article video {
+          width: 423px;
+          padding-top: 15px; } }
 
 footer {
   height: 10vh;

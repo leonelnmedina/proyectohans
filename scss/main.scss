@@ -7,13 +7,23 @@ main {
       grid-template-columns: 1fr;
       grid-template-areas: "sectUno";
       justify-items: center;
+
+      @include mobile {
+        grid-template-rows: 1fr 1.2fr;
+      }
     #sectionUno {
         text-align: center;
         grid-area: sectUno;
         font-size: 2rem;
         div {
             .imagen1 {
-                @include sizes (960px, center)
+                @include sizes (960px, center);
+                @include mobile {
+                    width: 423px;
+                }
+                @include tablet {
+                    max-width: 760px;
+                }
             }
         }
     }
@@ -23,6 +33,15 @@ main {
         width: 800px;
         color: $naranja; 
         font-weight: lighter;
+
+        @include mobile {
+            font-size: 1.7rem;
+            width: 420px;
+        }
+        @include tablet {
+            font-size: 1.6rem;
+            width: 100%;
+        }
         article {
             div {
                 h1 {
@@ -30,6 +49,10 @@ main {
                     padding: 15px;
                     border: 1px solid $naranja;
                     margin: 2px;
+
+                    @include tablet {
+                        text-align: center;
+                    }
                 }
             }
             .textOne {
@@ -45,7 +68,11 @@ main {
                 
             }
             video {
-                @include sizes (700px, center)
+                @include sizes (700px, center);
+                @include mobile {
+                    width: 423px;
+                    padding-top: 15px;
+                }
             }
         }
     }

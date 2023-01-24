@@ -11,6 +11,10 @@ header {
         div {
             .estiloLogo {
                 width: 210px;
+
+                @include mobile {
+                  width: 120px;
+                }
             }
         }
         .botonera {
@@ -22,6 +26,11 @@ header {
                     padding: 10px;
                     border: 2px solid $crema;
                     margin: 4px;
+
+                    @include mobile {
+                      padding: 3px;
+                      border: 2px solid $crema;
+                    }
                 }
             }
         }
@@ -29,6 +38,10 @@ header {
             text-decoration: none;
            color: $beige;
            font-size: 1.2rem;
+
+           @include mobile {
+            font-size: 1.1rem;
+           }
         }
         .boton1:hover {
             transform: scale(1.1);
