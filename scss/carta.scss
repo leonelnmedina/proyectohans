@@ -1,0 +1,109 @@
+main {
+   #sectionCartaUno {
+    padding: 20px;
+    .tituloCarta {
+        background-color: $marron;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        h1 {
+            color: $naranja;
+            font-family: SofiaBold;
+            font-weight: 100;
+            font-size: 2.3rem;
+        }
+    }
+    .galeriaCarta {
+        padding-bottom: 3em;
+        padding-top: 1em;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 25px;
+        grid-template-areas:
+        "img1 img2 img3"
+        "img4 img5 img6";
+        justify-items: center;
+        @include mobile {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas:
+            "img1 img2"
+            "img3 img4"
+            "img5 img6";
+        }
+        .imgGalery1{
+            width: 70%;
+            grid-area: "img1";
+            margin-left: 40px;
+            border-radius: 0.5rem;
+           
+        }
+        .imgGalery2{
+            width:70%;
+            grid-area: "img2";
+            border-radius: 0.5rem;
+             @include mobile {
+                 margin-right: 20px;
+             }
+        }
+        .imgGalery3{
+            width: 70%;
+            grid-area: "img3";
+            margin-right: 40px;
+            border-radius: 0.5rem;
+            @include mobile {
+                margin-left: 80px;
+            }
+        }
+        .imgGalery4{
+            width: 70%;
+            grid-area: "img4";
+            margin-left: 40px;
+            border-radius: 0.5rem;
+            @include mobile {
+                margin-right: 60px;
+            }
+        }
+        .imgGalery5{
+            width: 70%;
+            grid-area: "img5";
+            border-radius: 0.5rem;
+            @include mobile {
+                margin-left: 40px;
+            }
+        }
+        .imgGalery6{
+            width: 70%;
+            grid-area: "img6";
+            margin-right: 40px;
+            border-radius: 0.5rem;
+            @include mobile {
+                margin-right: 20px;
+            }
+        }
+        }
+        }
+        #sectionCartaDos {
+            width: 100%;
+            background-color: $marron;
+            margin-bottom: 35px;
+            article {
+                .textCarta {
+                    height: auto;
+                    padding: 15px;
+                    text-align: center;
+                    p {
+                        color: $beige;
+                        font-size: 2rem;
+                        font-family: SofiaRegular;
+                        a {
+                            color: $naranja;
+                        }
+
+                    }
+                }
+            }
+        }
+      } 

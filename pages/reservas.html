@@ -23,66 +23,60 @@
                <li><a href="./especialidades.html" class="boton2">ESPECIALIDADES</a></li>
                <li><a href="./carta.html" class="boton3">CARTA</a></li>
                <li><a href="./promociones.html" class="boton4">PROMOCIONES</a></li>
-               <li><a href="./reservas.html" class="boton5">CONTACTO</a></li>
+               <li><a href="./reservas.html" class="boton5">RESERVAS</a></li>
             </ul>
         </div>
     </nav>
   </header>
-
+<!-- main  -->
   <main>
-    <section id="sectionDos">
-       <article>
-        <div>
-            <h1>Reservas</h1>
-        </div>
-      <div class="textOne">
-        <p>Para realizar reservas complete el siguiente <b>formulario</b> y nos estaremos contactando con usted a la brevedad.</p>
-      <fieldset class="form__reservas">
-        <legend>Datos personales</legend>
-        <form action="" method="dialog" enctype="text/plain">
-          <div>
-            <label for="Nombre">Nombre</label>
-            <input type="text" id="Nombre" placeholder="ingrese solo en minúscula">
-          </div>
-          <div>
-               <label for="Apellido">Apellido</label>
-               <input type="text" id="Apellido" placeholder="ingrese solo en minúscula">
-          </div>
-          <div>
-            <label for="Email">Ingrese su correo</label>
-            <input type="email" name="Email" placeholder="ingrese su correo">
-          </div>
-          <div>
-            <label for="Celular">Ingrese su celular</label>
-            <input type="number" name="numero" id="numero" placeholder="ingrese su número de celular">
-          </div>
-        </form>
-      </fieldset>
-      <div>
-        <input type="submit" value="Enviar">
+    <section id="reservas">
+      <div class="contenedorReservas">
+        <h1 class="tituloReservas">Reservá en HANS</h1>
+        <h2>¡Te esperamos esperando!</h2>
       </div>
+      <div class="textForm">
+        <p>
+          <i>El after office que combina lo mejor de la coctelería internacional con la mística del rock</i>
+        </p>
+      </div>
+    </section>
+
+    <div class="contenedorForm">
+      <form class="form">
+        <div class="formSection">
+          <input type="text" placeholder="Nombre y Apellido" class="formInput">
+        </div>
+        <div class="formSection">
+          <input type="text" placeholder="Número de celular" class="formInput">
+        </div>
+        <div class="formSection">
+          <input type="date" class="formInput">
+        </div>
+        <div class="formSection">
+          <input type="submit" class=" formInputBottom">
+        </div>
+      </form>
+    
+
+    
+  
     </div>
-       
-    </article> 
-</section>
+
   </main>
 
   <!-- footer -->
- <footer>
-    <div>
-      <h3>Seguinos en nuestras redes sociales</h3>
+  <footer>
+    <div class="grupoFoot">
+     <div class="botoneraFoot">
+      <h3>¡Seguinos en nuestras redes sociales!</h3>
+          <a href="#"><img class="ico" src="../asset/image/footer-facebook.png" alt=""></a>
+          <a href="#"><img class="ico" src="../asset/image/footer-instagram.png" alt=""></a>
+          <a href="#"><img class="ico" src="../asset/image/footer-twitter.png" alt=""></a>
+          <a href="#"><img class="ico" src="../asset/image/footer-whatsapp.png" alt=""></a>
+     <p>Copyright 2023 HANS - Todos los derechos reservados.</p>
     </div>
-    <div class="botoneraFoot">
-      <ul>
-         <a href="#">Instagram</a>
-         <a href="#">YouTube</a>
-         <a href="#">Facebook</a>
-         <a href="#">Twitter</a>
-      </ul>
     </div>
-    <div>
-      <p>Copyright 2022 - Todos los derechos reservados</p>
-    </div>
-  </footer>
+   </footer>
 </body>
 </html>

@@ -1,0 +1,89 @@
+main {
+    #reservas {
+        width: 100vw;
+        padding: 20px;
+        
+        .contenedorReservas {
+            display: flex;
+            flex-direction: column;
+            background-color: $marron;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            .tituloReservas {
+                color: $naranja;
+                font-family: SofiaBold;
+                font-size: 2.4rem;
+                
+            }
+            h2 {
+                color: $beige;
+                font-family: SofiaRegular;
+                font-size: 2rem;
+                font-weight: 100;
+                padding: 10px;
+            }
+        }
+        .textForm {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            p {
+                color: $beige;
+                font-size: 1.7rem;
+                width: 300px;
+                font-family: SofiaRegular;
+                margin-top: 65px;
+            }
+        }
+    }
+    .contenedorForm {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: $marron;
+        border-radius: 0.5rem;
+        margin: 35px 30px;
+        .form {
+            min-width: 400px;
+            min-height: 250px;
+            text-align: center;
+            padding: 30px;
+            .formSection {
+                .formInput {
+                    width: 100%;
+                    padding: 10px;
+                    margin-top: 18px;
+                    font-family: SofiaRegular;
+                    font-size: 1.2rem;
+                    border: none;
+                    border-bottom: 3px solid $naranja;
+                    background-color: transparent;
+                    color: $beige;
+                }
+                .formInput:focus {
+                    background: linear-gradient(to bottom, transparent, $negro);
+                    outline: none;
+                }
+                .formInputBottom {
+                    width: 100%;
+                    padding: 10px;
+                    margin-top: 18px;
+                    font-family: SofiaRegular;
+                    font-size: 1.2rem;
+                    border: none;
+                    background-color: #FAA307;
+                    border: none;
+                    padding: 15px;
+                    color: $beige;
+                }
+                .formInputBottom:hover {
+                    background-color: $naranja;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

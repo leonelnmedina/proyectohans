@@ -1,20 +1,32 @@
 footer {
-    height: 10vh;
+    width: 100%;
     grid-area: footer;
     background-color: $negro;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    div {
-        h3 {
-            color: $beige;
-            font-weight: lighter;
-            font-size: 1.7rem;
-        }
-    }
-    .botoneraFoot {
+    .grupoFoot {
+        width: 100%;
+        height: 100%;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
+        .botoneraFoot {
+            h3 {
+                color: $beige;
+                font-size: 2rem;
+                text-align: center;
+                font-family: SofiaRegular;
+                font-weight: 100;
+            
+            }
+            .ico {
+                width: 35px;
+                margin-left: 50px;
+            }
+            p {
+                color: beige;
+                text-align: center;
+                margin: 5px 0px;
+            }
+        }
     }
 }

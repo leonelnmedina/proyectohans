@@ -1,79 +1,185 @@
 main {
-      height: 80vh;
-      background-color: #403D39;
       grid-area: main;
-      display: grid;
-      grid-template-rows: 2fr 1.5fr;
-      grid-template-columns: 1fr;
-      grid-template-areas: "sectUno";
-      justify-items: center;
-
-      @include mobile {
-        grid-template-rows: 1fr 1.2fr;
-      }
-    #sectionUno {
-        text-align: center;
-        grid-area: sectUno;
-        font-size: 2rem;
-        div {
-            .imagen1 {
-                @include sizes (960px, center);
+      background: url(../asset/image/fondo.jpg);
+      background-size: cover;
+      background-position: center center;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-evenly;
+      gap: 1rem;
+      #slider {
+            .sliderframe {
+                width: 70%;
+                height: auto;
+                margin: 50px auto 0;
+                overflow: hidden;
+                border-radius: 0.5rem;
                 @include mobile {
-                    width: 423px;
+                    width: 90%;
                 }
                 @include tablet {
-                    max-width: 760px;
+                    width: 95%;
                 }
-            }
-        }
+                ul {
+                    display: flex;
+                    padding: 0;
+                    width: 400%;
+                    animation: slide 16s infinite alternate ease-in-out;
+                    li {
+                        list-style: none;
+                        width: 100%;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }  
+      }
+      @keyframes slide {
+        0% {margin-left: 0;}
+        20% {margin-left: 0;}
+        
+        25% {margin-left: -100%;}
+        45% {margin-left: -100%;}
+        
+        50% {margin-left: -200%;}
+        70% {margin-left: -200%;}
+        
+        75% {margin-left: -300%;}
+        100% {margin-left: -300%;}
     }
-    #sectionDos {
+    #novedades1 {
+        width: 100vw;
         text-align: center;
-        font-size: 2rem;
-        width: 800px;
-        color: $naranja; 
-        font-weight: lighter;
-
-        @include mobile {
-            font-size: 1.7rem;
-            width: 420px;
-        }
-        @include tablet {
-            font-size: 1.6rem;
-            width: 100%;
-        }
+        padding: 20px;
+        overflow: hidden;
         article {
-            div {
-                h1 {
-                    background-color: $negro;
-                    padding: 15px;
-                    border: 1px solid $naranja;
-                    margin: 2px;
-
-                    @include tablet {
-                        text-align: center;
+            .contenedor1 {
+                background-color: $marron;
+                width: 100%;
+                padding: 20px;
+                .sectionNovedades {
+                    h3 {
+                        color: $beige;
+                        font-family: SofiaRegular;
+                        font-size: 2rem;
+                        font-weight: 400;
+                    }
+                }
+                .tituloNovedades {
+                    h2 {
+                        color: $naranja;
+                        font-family: SofiaBold;
+                        font-size: 2.3rem;
+                        font-weight: 100;
                     }
                 }
             }
-            .textOne {
-                font-family: poppyns;
-                font-size: 1.6rem;
+        }
+    }
+            .contenedor2 {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                padding: 20px;
+                .img1 {
+                    width: 25%;
+                    border: 2px solid $marron;
+                    border-radius: 0.5rem;
+                    @include mobile {
+                        width: 50%;
+                        padding: 2px;
+                    }
+                }
+                .img2 {
+                    width: 25%;
+                    border: 2px solid $marron;
+                    border-radius: 0.5rem;
+                    @include mobile {
+                        width: 50%;
+                        padding: 2px;
+                    }
+                }
+                .img3 {
+                    width: 25%;
+                    border: 2px solid $marron;
+                    border-radius: 0.5rem;
+                    @include mobile {
+                        width: 100%;
+                        padding: 2px;
+                    }
+                }
+            }
+
+      #sectionUno {
+        text-align: center;
+        align-items: center;
+        background-color: $marron;
+        margin: 10px;
+        width: 450px;
+        height: 500px;
+        padding: 12px;
+        border-radius: 0.5rem;
+        font-weight: lighter;
+        article {
+            .titulo1 {
+                font-family: SofiaBold;
+                color: $naranja;
+                font-size: 1.5rem;
+                text-align: center;
+                background-color: $negro;
+                border-radius: .4rem;
+                padding: 15px;
+                margin: 2px;
+                
+            }
+            .text1 {
+                font-family: SofiaRegular;
+                font-size: 1.8rem;
                 color: $beige;
                 padding: 5px;
             }
-            .textDos {
-                font-family: poppyns;
-                font-size: 1rem;
-                color: $beige;
-                
-            }
-            video {
-                @include sizes (700px, center);
-                @include mobile {
-                    width: 423px;
-                    padding-top: 15px;
-                }
-            }
         }
-    }
+      }
+      #sectionDos {
+        text-align: center;
+        background-color: $marron;
+        width: 450px;
+        height: 500px;
+        border-radius: .5rem;
+        padding: 12px;
+        @include mobile {
+            margin: 10px;
+        }
+        @include tablet {
+            margin: 10px;
+        }
+        article {
+            .titulo2 {
+                color: $naranja;
+                font-family: SofiaBold;
+                font-size: 1.5rem;
+                text-align: center;
+                background-color: $negro;
+                border-radius: .4rem;
+                padding: 15px;
+                margin: 2px;
+            }
+            .text2 {
+                font-family: SofiaRegular;
+                font-size: 1.8rem;
+                color: $beige;
+                padding: 5px;
+            }
+            .ubiHans {
+                width: 70%;
+                height: 70%;
+                border-radius: .3rem;
+            }
+
+        }
+      }
 }

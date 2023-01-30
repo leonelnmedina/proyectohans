@@ -1,0 +1,71 @@
+main {
+    #promociones {
+        width: 100vw;
+        text-align: center;
+        padding: 20px;
+        overflow: hidden;
+        article {
+            .tituloPromociones {
+                background-color: $marron;
+                width: 100%;
+                padding: 20px;
+                .tituloPromo {
+                        color: $naranja;
+                        font-family: SofiaBold;
+                        font-size: 2.5rem;
+                        font-weight: 100;
+                }
+            }
+            .contenedorPromo {
+                .contenedorHappy {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding: 20px;
+                    @include mobile {
+                            flex-direction: column;
+                        }
+                    .imagenHappy {
+                        width: 50%;
+                        @include mobile {
+                            width: 100%;
+                        }
+                        
+                        .happy {
+                            width: 66%;
+                            align-items: center;
+                            border-radius: 0.5rem;
+                        }
+                    }
+                    .descriptionHappy {
+                        width: 50%;
+                        text-align: start;
+                        color: $beige;
+                        @include mobile {
+                            text-align: center;
+                            width: 100%;
+                        }
+                        .estiloTitulo {
+                            color: $naranja;
+                            font-family: SofiaBold;
+                            text-decoration: underline;
+                            font-size: 2.2rem;
+                            font-weight: 100;
+                        }
+                        .textTitulo {
+                            width: 400px;
+                            font-family: SofiaRegular;
+                            font-size: 1.8rem;
+                            color: $beige;
+                            padding: 5px;
+                            @include mobile {
+                                font-size: 1.5rem;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
