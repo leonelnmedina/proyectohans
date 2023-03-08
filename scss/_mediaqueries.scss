@@ -1,11 +1,20 @@
+@mixin portatil {
+    @media screen and (max-width: 1024px) {
+        @content;
+    }
+}
 @mixin tablet {
     @media screen and (max-width: 768px) {
         @content;
     }
 }
-
 @mixin mobile {
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 577px) {
+        @content;
+    }
+}
+@mixin mobile320 {
+    @media screen and (max-width: 320px) {
         @content;
     }
 }

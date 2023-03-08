@@ -19,7 +19,40 @@ header {
             }
         }
         .botonera {
-            ul {
+          .navLabel {
+            display: none;
+            
+            @include mobile {
+              display: block;
+              cursor: pointer;
+            }
+            .navImg {
+              width: 39px;
+            }
+          }
+            .navInput {
+            display: none;
+          }
+          .navInput:checked + .navMenu{
+            @include mobile {
+              clip-path: circle(100% at center);
+            }
+          }
+            .navMenu {
+              @include mobile {
+                position: fixed;
+                top: 60px;
+                bottom: 0;
+                background-color: $negro;
+                width: 100%;
+                left: 0;
+                display: flex;
+                justify-content: space-evenly;
+                flex-direction: column;
+                align-items: center;
+                clip-path: circle(0 at center);
+                transition: clip-path 1s ease-in-out;
+              }
                 li {
                     list-style: none;
                     background-color: $naranja;
@@ -32,7 +65,7 @@ header {
                     border-radius: .5rem;
 
                     @include mobile {
-                      padding: 3px;
+                      padding: 13px 14px;
                     }
                 }
             }

@@ -29,10 +29,37 @@ header {
     flex-wrap: wrap; }
     header nav div .estiloLogo {
       width: 210px; }
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: 577px) {
         header nav div .estiloLogo {
           width: 120px; } }
-    header nav .botonera ul li {
+    header nav .botonera .navLabel {
+      display: none; }
+      @media screen and (max-width: 577px) {
+        header nav .botonera .navLabel {
+          display: block;
+          cursor: pointer; } }
+      header nav .botonera .navLabel .navImg {
+        width: 39px; }
+    header nav .botonera .navInput {
+      display: none; }
+    @media screen and (max-width: 577px) {
+      header nav .botonera .navInput:checked + .navMenu {
+        clip-path: circle(100% at center); } }
+    @media screen and (max-width: 577px) {
+      header nav .botonera .navMenu {
+        position: fixed;
+        top: 60px;
+        bottom: 0;
+        background-color: #252422;
+        width: 100%;
+        left: 0;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        clip-path: circle(0 at center);
+        transition: clip-path 1s ease-in-out; } }
+    header nav .botonera .navMenu li {
       list-style: none;
       background-color: #FAB915;
       display: inline-flex;
@@ -42,15 +69,15 @@ header {
       margin: 5px;
       font-family: SofiaRegular;
       border-radius: .5rem; }
-      @media screen and (max-width: 425px) {
-        header nav .botonera ul li {
-          padding: 3px; } }
+      @media screen and (max-width: 577px) {
+        header nav .botonera .navMenu li {
+          padding: 13px 14px; } }
     header nav .botonera a:link, header nav a:visited, header nav a:active {
       text-decoration: none;
       color: #FFFCF2;
       font-size: 1.3rem;
       font-weight: 500; }
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: 577px) {
         header nav .botonera a:link, header nav a:visited, header nav a:active {
           font-size: 1.1rem; } }
     header nav .boton1:hover {
@@ -86,7 +113,7 @@ main {
     margin: 50px auto 0;
     overflow: hidden;
     border-radius: 0.5rem; }
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 577px) {
       main #slider .sliderframe {
         width: 90%; } }
     @media screen and (max-width: 768px) {
@@ -149,7 +176,7 @@ main {
       width: 25%;
       border: 2px solid #403D39;
       border-radius: 0.5rem; }
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: 577px) {
         main .contenedor2 .img1 {
           width: 50%;
           padding: 2px; } }
@@ -157,7 +184,7 @@ main {
       width: 25%;
       border: 2px solid #403D39;
       border-radius: 0.5rem; }
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: 577px) {
         main .contenedor2 .img2 {
           width: 50%;
           padding: 2px; } }
@@ -165,7 +192,7 @@ main {
       width: 25%;
       border: 2px solid #403D39;
       border-radius: 0.5rem; }
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: 577px) {
         main .contenedor2 .img3 {
           width: 100%;
           padding: 2px; } }
@@ -179,6 +206,9 @@ main {
     padding: 12px;
     border-radius: 0.5rem;
     font-weight: lighter; }
+    @media screen and (max-width: 320px) {
+      main #sectionUno {
+        height: 525px; } }
     main #sectionUno article .titulo1 {
       font-family: SofiaBold;
       color: #FAB915;
@@ -200,12 +230,15 @@ main {
     height: 500px;
     border-radius: .5rem;
     padding: 12px; }
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 577px) {
       main #sectionDos {
         margin: 10px; } }
     @media screen and (max-width: 768px) {
       main #sectionDos {
         margin: 10px; } }
+    @media screen and (max-width: 320px) {
+      main #sectionDos {
+        height: 525px; } }
     main #sectionDos article .titulo2 {
       color: #FAB915;
       font-family: SofiaBold;
@@ -244,16 +277,20 @@ footer {
       font-weight: 100; }
     footer .grupoFoot .botoneraFoot .ico {
       width: 35px;
-      margin-left: 50px; }
+      margin: 0px 30px; }
+      @media screen and (max-width: 320px) {
+        footer .grupoFoot .botoneraFoot .ico {
+          width: 30px;
+          margin: 0px 20px; } }
     footer .grupoFoot .botoneraFoot p {
-      color: beige;
+      color: #FFFCF2;
       text-align: center;
       margin: 5px 0px; }
 
 main #sectionEspec {
   width: 100vw;
   padding: 20px;
-  overflow: hidden; }
+  overflow-x: hidden; }
   main #sectionEspec article .tituloEspec {
     display: flex;
     text-align: center;
@@ -284,11 +321,9 @@ main #sectionEspec {
   main #sectionEspec article .contenedorHamburguesa {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    text-align: center;
     align-items: center;
     padding: 20px; }
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 577px) {
       main #sectionEspec article .contenedorHamburguesa {
         flex-direction: column;
         flex-wrap: wrap; } }
@@ -298,30 +333,34 @@ main #sectionEspec {
     main #sectionEspec article .contenedorHamburguesa .video1 {
       justify-content: center;
       width: 50%; }
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: 577px) {
         main #sectionEspec article .contenedorHamburguesa .video1 {
           width: 100%; } }
       @media screen and (max-width: 768px) {
         main #sectionEspec article .contenedorHamburguesa .video1 {
           width: 100%; } }
       main #sectionEspec article .contenedorHamburguesa .video1 video {
-        width: 60%;
-        height: 400px;
+        width: 80%;
+        height: auto;
         border-radius: .5rem; }
-        @media screen and (max-width: 425px) {
+        @media screen and (max-width: 577px) {
           main #sectionEspec article .contenedorHamburguesa .video1 video {
             width: 100%;
             height: 200px; } }
         @media screen and (max-width: 768px) {
           main #sectionEspec article .contenedorHamburguesa .video1 video {
             width: 100%; } }
+        @media screen and (max-width: 1024px) {
+          main #sectionEspec article .contenedorHamburguesa .video1 video {
+            width: 100%;
+            height: auto; } }
     main #sectionEspec article .contenedorHamburguesa .descriptionHamb {
       justify-content: center;
       width: 50%;
       height: auto;
       padding: 15px;
       margin: 15px; }
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: 577px) {
         main #sectionEspec article .contenedorHamburguesa .descriptionHamb {
           width: 100%;
           margin: 0px; } }
@@ -338,7 +377,7 @@ main #sectionEspec {
         text-align: center;
         margin-left: 100px;
         border-radius: .5rem; }
-        @media screen and (max-width: 425px) {
+        @media screen and (max-width: 577px) {
           main #sectionEspec article .contenedorHamburguesa .descriptionHamb p {
             width: 100%;
             font-size: 1.5rem;
@@ -347,16 +386,22 @@ main #sectionEspec {
           main #sectionEspec article .contenedorHamburguesa .descriptionHamb p {
             width: 100%;
             margin-left: 0px; } }
+        @media screen and (max-width: 1024px) {
+          main #sectionEspec article .contenedorHamburguesa .descriptionHamb p {
+            width: 100%;
+            font-size: 1.5rem;
+            margin-left: 0px; } }
 
 main #sectionCerv {
   width: 100vw;
-  padding: 20px; }
+  padding: 20px;
+  overflow-x: hidden; }
   main #sectionCerv article .subtitulo2 {
     display: flex;
     align-items: baseline;
     padding: 10px;
     background-color: #252422; }
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 577px) {
       main #sectionCerv article .subtitulo2 {
         width: 100%;
         flex-direction: column; } }
@@ -378,7 +423,7 @@ main #sectionCerv {
     text-align: center;
     align-items: stretch;
     padding: 20px; }
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 577px) {
       main #sectionCerv article .contenedorCerveza {
         flex-direction: column;
         flex-wrap: wrap;
@@ -393,7 +438,7 @@ main #sectionCerv {
       height: auto;
       padding: 15px;
       margin: 15px; }
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: 577px) {
         main #sectionCerv article .contenedorCerveza .descriptionCerveza {
           width: 100%;
           margin: 0px; } }
@@ -410,7 +455,7 @@ main #sectionCerv {
         margin-left: 200px;
         border-radius: .5rem;
         padding: 15px; }
-        @media screen and (max-width: 425px) {
+        @media screen and (max-width: 577px) {
           main #sectionCerv article .contenedorCerveza .descriptionCerveza p {
             width: 100%;
             font-size: 1.5rem;
@@ -421,21 +466,26 @@ main #sectionCerv {
             width: 100%;
             font-size: 1.7rem;
             margin-left: 0px; } }
+        @media screen and (max-width: 1024px) {
+          main #sectionCerv article .contenedorCerveza .descriptionCerveza p {
+            width: 100%;
+            font-size: 1.5rem;
+            margin-left: 0px; } }
     main #sectionCerv article .contenedorCerveza div {
       justify-content: center;
       width: 50%; }
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: 577px) {
         main #sectionCerv article .contenedorCerveza div {
           width: 100%; } }
       @media screen and (max-width: 768px) {
         main #sectionCerv article .contenedorCerveza div {
           width: 100%; } }
       main #sectionCerv article .contenedorCerveza div iframe {
-        width: 60%;
+        width: 80%;
         height: 400px;
         border-radius: .5rem;
         margin-right: 200px; }
-        @media screen and (max-width: 425px) {
+        @media screen and (max-width: 577px) {
           main #sectionCerv article .contenedorCerveza div iframe {
             width: 300px;
             height: 200px;
@@ -443,6 +493,11 @@ main #sectionCerv {
         @media screen and (max-width: 768px) {
           main #sectionCerv article .contenedorCerveza div iframe {
             width: 100%;
+            margin-right: 0px; } }
+        @media screen and (max-width: 1024px) {
+          main #sectionCerv article .contenedorCerveza div iframe {
+            width: 100%;
+            height: 300px;
             margin-right: 0px; } }
 
 main #sectionCartaUno {
@@ -467,7 +522,7 @@ main #sectionCartaUno {
     grid-gap: 25px;
     grid-template-areas: "img1 img2 img3" "img4 img5 img6";
     justify-items: center; }
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 577px) {
       main #sectionCartaUno .galeriaCarta {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
@@ -481,7 +536,7 @@ main #sectionCartaUno {
       width: 70%;
       grid-area: "img2";
       border-radius: 0.5rem; }
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: 577px) {
         main #sectionCartaUno .galeriaCarta .imgGalery2 {
           margin-right: 20px; } }
     main #sectionCartaUno .galeriaCarta .imgGalery3 {
@@ -489,7 +544,7 @@ main #sectionCartaUno {
       grid-area: "img3";
       margin-right: 40px;
       border-radius: 0.5rem; }
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: 577px) {
         main #sectionCartaUno .galeriaCarta .imgGalery3 {
           margin-left: 80px; } }
     main #sectionCartaUno .galeriaCarta .imgGalery4 {
@@ -497,14 +552,14 @@ main #sectionCartaUno {
       grid-area: "img4";
       margin-left: 40px;
       border-radius: 0.5rem; }
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: 577px) {
         main #sectionCartaUno .galeriaCarta .imgGalery4 {
           margin-right: 60px; } }
     main #sectionCartaUno .galeriaCarta .imgGalery5 {
       width: 70%;
       grid-area: "img5";
       border-radius: 0.5rem; }
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: 577px) {
         main #sectionCartaUno .galeriaCarta .imgGalery5 {
           margin-left: 40px; } }
     main #sectionCartaUno .galeriaCarta .imgGalery6 {
@@ -512,7 +567,7 @@ main #sectionCartaUno {
       grid-area: "img6";
       margin-right: 40px;
       border-radius: 0.5rem; }
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: 577px) {
         main #sectionCartaUno .galeriaCarta .imgGalery6 {
           margin-right: 20px; } }
 
@@ -550,12 +605,12 @@ main #promociones {
     flex-direction: row;
     align-items: center;
     padding: 20px; }
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 577px) {
       main #promociones article .contenedorPromo .contenedorHappy {
         flex-direction: column; } }
     main #promociones article .contenedorPromo .contenedorHappy .imagenHappy {
       width: 50%; }
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: 577px) {
         main #promociones article .contenedorPromo .contenedorHappy .imagenHappy {
           width: 100%; } }
       main #promociones article .contenedorPromo .contenedorHappy .imagenHappy .happy {
@@ -566,7 +621,7 @@ main #promociones {
       width: 50%;
       text-align: start;
       color: #FFFCF2; }
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: 577px) {
         main #promociones article .contenedorPromo .contenedorHappy .descriptionHappy {
           text-align: center;
           width: 100%; } }
@@ -582,7 +637,7 @@ main #promociones {
         font-size: 1.8rem;
         color: #FFFCF2;
         padding: 5px; }
-        @media screen and (max-width: 425px) {
+        @media screen and (max-width: 577px) {
           main #promociones article .contenedorPromo .contenedorHappy .descriptionHappy .textTitulo {
             font-size: 1.5rem;
             width: 100%; } }

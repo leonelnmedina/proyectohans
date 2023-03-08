@@ -8,7 +8,7 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: center;                
         .botoneraFoot {
             h3 {
                 color: $beige;
@@ -20,10 +20,15 @@ footer {
             }
             .ico {
                 width: 35px;
-                margin-left: 50px;
+                margin: 0px 30px; 
+                @include mobile320 {
+                 width: 30px;
+                 margin:0px 20px;
+             }
             }
+             
             p {
-                color: beige;
+                color: $beige;
                 text-align: center;
                 margin: 5px 0px;
             }

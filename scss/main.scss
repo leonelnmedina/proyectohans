@@ -124,6 +124,9 @@ main {
         padding: 12px;
         border-radius: 0.5rem;
         font-weight: lighter;
+        @include mobile320 {
+            height: 525px;
+        }
         article {
             .titulo1 {
                 font-family: SofiaBold;
@@ -156,6 +159,9 @@ main {
         }
         @include tablet {
             margin: 10px;
+        }
+        @include mobile320 {
+            height: 525px;
         }
         article {
             .titulo2 {
